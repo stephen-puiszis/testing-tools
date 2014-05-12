@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title A/B Testing Tools
+    %meta{charset: "utf-8"}
+    %meta{description: "A/B Testing statistics and tools"}
+    %link(rel="icon" href="assets/favicon.ico")
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => '/styles.css'}
+    %script{type: "text/javascript", src:"http://d3js.org/d3.v3.min.js",      charset:"utf-8"}
+    %script{type: "text/javascript", src:"/scripts/jquery-1.11.0.min.js",     charset:"utf-8"}
+    %script{type: "text/javascript", src:"/scripts/calculator.js",            charset:"utf-8"}
+    %script{type: "text/javascript", src:"/scripts/charting/bar-chart.js",    charset:"utf-8"}
+    %script{type: "text/javascript", src:"/scripts/charting/candle-chart.js", charset:"utf-8"}
+  %body
+    #content
+      =haml :header
+      =yield
+      =haml :footer

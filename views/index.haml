@@ -1,0 +1,44 @@
+.content
+  %h1 Confidence Intervals
+  #main
+    %h3
+    %table#inputs
+      %thead
+        %tr
+          %td Variation Name
+          %td Impressions
+          %td Conversions
+      %tbody
+        %tr.data-row.control
+          %td
+            %input{name: 'label', type: 'text', value: 'Control'}
+          %td
+            %input{name: 'impressions', type: 'number'}
+          %td
+            %input{name: 'conversions', type: 'number'}
+        %tr.data-row.variation
+          %td
+            %input{name: 'label', type: 'text', value: 'Variation-1'}
+          %td
+            %input{name: 'impressions', type: 'number'}
+          %td
+            %input{name: 'conversions', type: 'number'}
+
+    %button#add-variation.btn +Variation
+    .select-styling
+      %select#confidence-level.btn{name:'confidence-level'}
+        %option{value:'0.80'} 80% Confidence
+        %option{value:'0.90'} 90% Confidence
+        %option{value:'0.95', selected: true} 95% Confidence
+        %option{value:'0.98'} 98% Confidence
+        %option{value:'0.99'} 99% Confidence
+    %button#calculate.btn Calculate Confidence
+
+    #results
+      %ul
+      #candle-chart
+        %h2.chart-title Confidence Intervals
+      #bar-chart
+        %h2.chart-title Conversion Rates
+      #change-chart
+        %h2.chart-title Improvement
